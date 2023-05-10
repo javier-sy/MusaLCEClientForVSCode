@@ -1,0 +1,97 @@
+{
+    "publisher": "javier-sy",
+    "name": "musa-lce-client-for-vscode",
+    "displayName": "Musa-DSL Live Coding Environment for Visual Studio Code",
+    "description": "Visual Studio Code extension for Musa-DSL Live Coding Environment",
+    "version": "0.1.0",
+    "license": "GPL-3.0",
+    "engines": {
+        "vscode": "^1.77.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Other"
+    ],
+    "keywords": [
+        "musa-dsl",
+        "live coding",
+        "music composition"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "musa-lce-client-for-vscode.send",
+                "title": "MusaLCE: send"
+            },
+            {
+                "command": "musa-lce-client-for-vscode.toggle",
+                "title": "MusaLCE: toggle results"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "musa-lce-client-for-vscode.send",
+                "key": "ctrl+alt+enter",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "musa-lce-client-for-vscode.toggle",
+                "key": "ctrl+alt+m",
+                "when": "editorTextFocus"
+            }
+        ],
+        "menus": {
+           "editor/context": [
+                {
+                    "command": "musa-lce-client-for-vscode.send",
+                    "group": "navigation"
+                }
+            ],
+            "editor/title": [
+                {
+                    "command": "musa-lce-client-for-vscode.toggle",
+                    "group": "navigation"
+                },
+                {
+                    "command": "musa-lce-client-for-vscode.send",
+                    "group": "navigation"
+                }
+            ],
+            "commandPalette": [
+                {
+                    "command": "musa-lce-client-for-vscode.send",
+                    "when": "editorTextFocus"
+                },
+                {
+                    "command": "musa-lce-client-for-vscode.toggle"
+                }
+            ]
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/javier-sy/MusaLCEClientForVSCode.git"
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.77.0",
+        "@types/glob": "^8.1.0",
+        "@types/mocha": "^10.0.1",
+        "@types/node": "16.x",
+        "@typescript-eslint/eslint-plugin": "^5.59.1",
+        "@typescript-eslint/parser": "^5.59.1",
+        "eslint": "^8.39.0",
+        "glob": "^8.1.0",
+        "mocha": "^10.2.0",
+        "typescript": "^5.0.4",
+        "@vscode/test-electron": "^2.3.0"
+    }
+}
