@@ -1,4 +1,4 @@
-# musa-dsl-atom-repl
+# MusaLCEClientForVSCode
 
 A Visual Studio Code extension to allow a Read-Eval-Print-Loop connected to a Musa-DSL REPL server.
 
