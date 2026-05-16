@@ -1,5 +1,12 @@
 # MusaLCEClientForVSCode
 
+> **⚠️ This README is outdated.** The Ruby snippet below describes a pre-2020 setup
+> that hand-rolled a REPL with `unimidi`. The modern workflow uses the
+> [musalce-server](https://github.com/javier-sy/musalce-server) gem (`musalce-server bitwig`
+> or `musalce-server live`) and the extension connects to it on `localhost:1327`.
+> See the [musalce-server README](https://github.com/javier-sy/musalce-server#readme)
+> for the current Quick Start. A full rewrite of this README is pending.
+
 A Visual Studio Code extension to allow a Read-Eval-Print-Loop connected to a Musa-DSL REPL server.
 
 [Musa-DSL](https://github.com/javier-sy/musa-dsl) is a Ruby Domain Specific Language for algorithmic musical composition.
@@ -33,3 +40,11 @@ Keystrokes inside Visual Studio Code:
 * *Ctrl-Alt-M:* opens the Musa-DSL REPL Status panel. This panel shows the responses from the server when it evals the commands sent from the Atom client. The response includes the inmediate response and the future responses for the commands that develop in time.
 
 * *Ctrl-Alt-Return:* sends current selection or current line (if nothing is selected) as a command to Musa-DSL REPL server. The response is shown in Musa-DSL REPL Status panel.
+
+## Author
+
+* [Javier Sánchez Yeste](https://github.com/javier-sy)
+
+## License
+
+[MusaLCEClientForVSCode](https://github.com/javier-sy/MusaLCEClientForVSCode) Copyright (c) 2021-2026 [Javier Sánchez Yeste](https://yeste.studio), licensed under GPL 3.0 License
