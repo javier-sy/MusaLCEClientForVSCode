@@ -1,0 +1,18 @@
+# Configuración de versión para MusaLCEClientForVSCode
+TYPE="vsix"
+PKG_NAME="musa-lce-client-for-vscode"
+VERSION_FILE="package.json"
+TEST_COMMAND=""
+BUILD_COMMAND="npm install && npm run compile && npx --yes @vscode/vsce package --no-yarn --skip-license"
+
+# Publicación a VSCode Marketplace. Requiere VSCE_PAT en env (Personal Access
+# Token de Azure DevOps con scope Marketplace > Manage) o haber corrido antes
+# `npx @vscode/vsce login javier-sy`. Publica el .vsix construido por
+# BUILD_COMMAND para no re-empaquetar.
+PUBLISH_COMMAND='npx --yes @vscode/vsce publish --packagePath "$PKG_NAME-$version.vsix"'
+PUBLISH_PLATFORM="VSCode Marketplace"
+
+# Detección de instalación local: VSCode despliega como directorio con la
+# versión en el suffix del nombre. Basta verificar presencia.
+INSTALL_PATH='$HOME/.vscode/extensions/javier-sy.musa-lce-client-for-vscode-$version'
+INSTALL_VERSION_CHECK='[[ -d "$INSTALL_PATH" ]]'
