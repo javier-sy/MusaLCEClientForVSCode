@@ -60,17 +60,29 @@ Both workflows use the same VSCode extension. The extension does not know or car
 
 ## Install
 
-The extension is not currently published to the VSCode Marketplace. Build and install locally:
+### From the VSCode Marketplace (recommended)
+
+The extension is published as [`javier-sy.musa-lce-client-for-vscode`](https://marketplace.visualstudio.com/items?itemName=javier-sy.musa-lce-client-for-vscode). Install in one line:
+
+```bash
+code --install-extension javier-sy.musa-lce-client-for-vscode
+```
+
+Or search for *"Musa-DSL Live Coding"* in the Extensions sidebar inside VSCode.
+
+### From source (for development)
+
+If you're hacking on the extension itself or want to install an unreleased build:
 
 ```bash
 cd MusaLCEClientForVSCode
 npm install
 npm run compile
-npx vsce package      # produces musa-lce-client-for-vscode-<version>.vsix
+npx @vscode/vsce package       # produces musa-lce-client-for-vscode-<version>.vsix
 code --install-extension musa-lce-client-for-vscode-*.vsix
 ```
 
-Or, during development, open the project in VSCode and press **F5** to launch an Extension Development Host with the extension loaded.
+Or open the project in VSCode and press **F5** to launch an Extension Development Host with the extension loaded from the current source.
 
 ## Keybindings
 
