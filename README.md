@@ -120,6 +120,16 @@ Selections beginning with `#%` are treated as **internal extension commands** ra
 | Status panel shows code echoes but no output | The server is connected, but the Ruby code has no `puts` and no return value worth displaying. Add `puts something` to verify. |
 | Need to point at a non-default host/port | See *Configuration* above — currently requires editing `connection.ts`. |
 
+## More from the MusaDSL ecosystem
+
+- [MusaDSL](https://musadsl.yeste.studio) — Ruby framework for algorithmic sound and musical composition.
+- [MusaLCE](https://musalce.yeste.studio) — live coding environment for Ableton Live and Bitwig Studio.
+- [Nota](https://nota.yeste.studio) — Claude Code plugin for AI-assisted MusaDSL composition.
+- **Pulso** — Stream Deck plugin for MusaLCE Surface controls *(upcoming)*.
+- **VST3 plugins** — collection of audio plugins for mixing and mastering *(upcoming)*.
+
+For the full map — descriptions, how they relate, which one to pick for what — see [musa-ecosystem.yeste.studio](https://musa-ecosystem.yeste.studio).
+
 ## Author
 
 [Javier Sánchez Yeste](https://github.com/javier-sy)
