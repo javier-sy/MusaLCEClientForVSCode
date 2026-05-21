@@ -54,7 +54,7 @@ See the [musalce-server README](https://github.com/javier-sy/musalce-server#read
 |---|---|
 | You want full control over MIDI/clock/voices | You want the DAW connection ready out of the box |
 | You're driving SuperCollider, Max/MSP, OSC apps, the `say` voice, etc. | You're driving Bitwig or Live |
-| You're prototyping a personal live-coding DSL | You want Stream Deck integration via Pulso (Bitwig only today) |
+| You're prototyping a personal live-coding DSL | You want a Stream Deck wired into your score via Pulso's MusaLCE Surface integration (Bitwig only today) |
 
 Both workflows use the same VSCode extension. The extension does not know or care which server is on the other end.
 
@@ -125,7 +125,7 @@ Selections beginning with `#%` are treated as **internal extension commands** ra
 - [MusaDSL](https://musadsl.yeste.studio) — Ruby framework for algorithmic sound and musical composition.
 - [MusaLCE](https://musalce.yeste.studio) — live coding environment for Ableton Live and Bitwig Studio.
 - [Nota](https://nota.yeste.studio) — Claude Code plugin for AI-assisted MusaDSL composition.
-- **Pulso** — Stream Deck plugin for MusaLCE Surface controls *(upcoming)*.
+- **Pulso** — Stream Deck control for music DAWs (Bitwig today; Ableton planned), with MusaLCE Surface integration *(upcoming)*.
 
 For the full map — descriptions, how they relate, which one to pick for what — see [musa-ecosystem.yeste.studio](https://musa-ecosystem.yeste.studio).
 
