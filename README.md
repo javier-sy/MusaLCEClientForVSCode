@@ -1,6 +1,6 @@
 # MusaLCEClientForVSCode
 
-**Visual Studio Code extension that acts as a REPL client for any [Musa-DSL](https://github.com/javier-sy/musa-dsl) live coding session.**
+**Visual Studio Code extension that acts as a REPL client for any [Musa-DSL](https://musa-dsl.yeste.studio) [REPL](https://github.com/javier-sy/musa-dsl/blob/master/docs/subsystems/repl.md) live coding session.**
 
 Send selected code (or the current line) from VSCode to a running `Musa::REPL` server over TCP, watch the server's responses and errors stream into a side panel. The extension is REPL-agnostic — it works with any server that speaks the Musa REPL line protocol on `localhost:1327`.
 
@@ -32,7 +32,7 @@ transport.start
 
 Run `ruby main.rb`, then connect from VSCode. Maximum control; you wire MIDI, voices, clock and any custom DSL helpers yourself. See [`musadsl-demo/_demo-13-live-coding`](https://github.com/javier-sy/musadsl-demo) for a complete worked example (Tidal-Cycles-style `d(n)`, `hush`, `solo` API).
 
-### 2) Via musalce-server — the suite handles REPL + DAW
+### 2) Via musalce-server suite — the suite handles REPL + DAW
 
 Install and run the [musalce-server](https://github.com/javier-sy/musalce-server) gem:
 
